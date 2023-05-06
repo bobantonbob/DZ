@@ -9,3 +9,6 @@ def speed_test(function):
         return result
     return wrapper
 
+
+@speed_test
+def my_function(time):
