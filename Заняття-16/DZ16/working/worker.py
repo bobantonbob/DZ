@@ -1,4 +1,10 @@
-shtat = {}
+shtat = {
+    "Бабенко" : {
+        'Номер' : 30501234567,
+        'компанія' : "Home",
+        'Виплати' : 1000,
+        }
+    }
 
 def add_new_worker():
     name = input("ВВедіть ПІБ нового працівника: ")
@@ -63,32 +69,32 @@ def replace_payments_worker():
 
 
 
-def menu():
-    print("Оберіть один з пунктів: ")
-    print("1. ПІБ нового працівника ")
-    print("2. Знайти штатного працівника ")
-    print("3. Видалити штатного працівника ")
-    print("4. Змінити номер телефону працівника ")
-    print("5. Змінити місце роботи працівника ")
-    print("6. Змінити заробітну плату працівника ")
-    print('7. Вихід ')
-    for key, value in shtat.items():
-        print(f"{key}: {value} ")
-    menu()
-    nomber = int(input("Ваш вибір: "))
-    if nomber == 1:
-        add_new_worker()
-    if nomber == 2:
-        search_worker()
-    if nomber == 3:
-        delete_worker()
-    if nomber == 4:
-        replace_telephone_worker()
-    if nomber == 5:
-        replace_company_worker()
-    if nomber == 6:
-        replace_payments_worker()
-    if nomber == 7:
-        exit()
-    if nomber not in range(1, 8):
-        print("Невірний вибір. Смерть ворогам")
+# def menu():
+#     print("Оберіть один з пунктів: ")
+#     print("1. ПІБ нового працівника ")
+#     print("2. Знайти штатного працівника ")
+#     print("3. Видалити штатного працівника ")
+#     print("4. Змінити номер телефону працівника ")
+#     print("5. Змінити місце роботи працівника ")
+#     print("6. Змінити заробітну плату працівника ")
+#     print('7. Вихід ')
+#     for key, value in shtat.items():
+#         print(f"{key}: {value} ")
+#
+#     nomber = int(input("Ваш вибір: "))
+#     if nomber == 1:
+#         add_new_worker()
+#     if nomber == 2:
+#         search_worker()
+#     if nomber == 3:
+#         delete_worker()
+#     if nomber == 4:
+#         replace_telephone_worker()
+#     if nomber == 5:
+#         replace_company_worker()
+#     if nomber == 6:
+#         replace_payments_worker()
+#     if nomber == 7:
+#         exit()
+#     if nomber not in range(1, 8):
+#         print("Невірний вибір. Смерть ворогам")

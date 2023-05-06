@@ -1,4 +1,9 @@
-companies = {}
+companies = {
+    "Home" : {
+        'Кіл_Працівників' : 1,
+        'Річний_бюджет' : 12000,
+    }
+}
 
 
 def add_new_company():
