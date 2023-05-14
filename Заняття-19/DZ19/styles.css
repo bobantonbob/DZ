@@ -1,0 +1,63 @@
+.bar2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100px;
+  height: 50px;
+  margin-right: 30px;
+}
+
+.bar2-icon {
+  display: flex;
+  text-align: center;
+  margin: 0 1px;
+}
+
+.bar2-icon p {
+  margin: 0;
+  font-size: 20px;
+  color: #666;
+  text-align: center;
+}
+
+.bar2-icon i {
+  width: 40px;
+  height: 20px;
+  margin-right: 1px;
+  text-align: center;
+  color: #666;
+}
+
+.separator {
+  width: 1px;
+  height: 16px;
+  background-color: #ccc;
+  margin-right: 5px;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+
+
+form{
+            width: 800px;
+            box-shadow: 1px 5px 5px grey;
+            border: 1px solid grey;
+            border-radius: 20px;
+        }
+        form input{
+            background: none;
+            border: none;
+            width:450px;
+            margin-left: 20px;
+            padding: 10px;
+        }
+        form button{
+            background: none;
+            border: none;
+            padding: 10px;
+        }
+
+        form button:hover{
+            background-color: grey;
+        }
