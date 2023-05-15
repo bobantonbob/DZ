@@ -1,47 +1,40 @@
 # Для класів із попереднього завдання реалізуйте магічний метод str,  а також метод int (який повертає вік службовця)
 
 class Employer:
+    def __init__(self, age):
+        self.age = age
+
     def __str__(self):
         return "This is Employer class"
 
-    def get_age(self):
-        return 0
+    def __int__(self):
+        return self.age
 
 
 class President(Employer):
     def __str__(self):
         return "This is President class"
 
-    def get_age(self):
-        return 50
-
 
 class Manager(Employer):
     def __str__(self):
         return "This is Manager class"
 
-    def get_age(self):
-        return 40
-
-
 class Worker(Employer):
     def __str__(self):
         return "This is Worker class"
 
-    def get_age(self):
-        return 30
-
 
 # Створення екземплярів кожного класу і виклик їх методів
 
-president = President()
+president = President(50)
 print(str(president))
-print(president.get_age())
+print(int(president))
 
-manager = Manager()
+manager = Manager(40)
 print(str(manager))
-print(manager.get_age())
+print(int(manager))
 
-worker = Worker()
+worker = Worker(30)
 print(str(worker))
-print(worker.get_age())
+print(int(worker))
