@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+
+<h3>
+Практична
+</h3>
+
+
+<p id ="demo"> test paragraf
+</p>
+
+<button> test
+</button>
+
+
+<script>
+
+// let p = document.getElementById("demo");
+
+// let name = "BoB"
+
+// p.innerHTML = "<b>BoBo</b>" + name
+
+
+
+// let a;
+// a = 10;
+
+// let b = "BoB";
+
+// c = 19.34;
+
+// console.log(c)
+// console.log(a)
+// console.log(b);
+// console.log("Привіт");
+
+
+// function test(){
+
+// }
+
+// let a, b;
+
+// b = 30;
+// a = "Dor";
+
+// let c = a + " " +b;
+
+// console.log(c)
+
+// let a = Number(prompt('a='));
+// let b = Number(prompt("b="));
+// console.log(a + b);
+
+// if (a+b == 4) {
+//     console.log("ВСе гуд")
+// }
+// else{
+//     console.log("negativ")
+// }
+
+
+
+var weekNumber = prompt("Введіть номер тижня (1-7):");
+
+
+weekNumber = parseInt(weekNumber);
+
+
+if (weekNumber >= 1 && weekNumber <= 7) {
+    
+    var daysOfWeek = ['Понеділок', 'Вівторок', 'Середа', 'Четвер', 'Пятниця', 'Субота', 'Неділя'];
+
+    
+    var dayOfWeek = daysOfWeek[weekNumber - 1];
+    console.log("Назва дня тижня:", dayOfWeek);
+} else {
+    console.log("Некоректний номер тижня. Введіть число від 1 до 7.");
+}
+
+
+
+
+
+var monthNumber = prompt("Введіть номер місяця (1-12):");
+
+
+monthNumber = parseInt(monthNumber);
+
+
+if (monthNumber >= 1 && monthNumber <= 12) {
+   
+    var months = ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'];
+
+    var monthName = months[monthNumber - 1];
+    console.log("Назва місяця:", monthName);
+} else {
+    console.log("Некоректний номер місяця. Введіть число від 1 до 12.");
+}
+
+
+
+
+var number = prompt("Введіть число:");
+
+
+number = parseFloat(number);
+
+
+if (number > 0) {
+    console.log("Позитивне число");
+} else if (number < 0) {
+    console.log("Негативне число");
+} else {
+    console.log("Число дорівнює нулю");
+}
+
+
+
+var number1 = parseFloat(prompt("Введіть перше число:"));
+
+
+var number2 = parseFloat(prompt("Введіть друге число:"));
+
+
+if (number1 === number2) {
+    console.log("Числа рівні");
+} else {
+    
+    if (number1 < number2) {
+        console.log(number1, number2);
+    } else {
+        console.log(number2, number1);
+    }
+}
+
+
+</script>
+
+
+</body>
+</html>
