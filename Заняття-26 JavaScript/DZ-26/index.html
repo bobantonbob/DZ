@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+
+<h3>
+Домашня DZ-26
+</h3>
+
+
+<p id ="demo"> test paragraf
+</p>
+
+<button> test
+</button>
+
+
+<script>
+
+// Завдання 1.
+// Користувач вводить з клавіатури три числа.
+// Залежно від вибору користувача, програма виводить на екран суму трьох
+// чисел або добуток трьох чисел.
+
+var nam1 = parseInt(prompt("(Завдання 1) Введіть перше число: "));
+var nam2 = parseInt(prompt("(Завдання 1) Введіть друге число: "));
+var nam3 = parseInt(prompt("(Завдання 1) Введіть трете число: "));
+
+var choice = prompt("ВВедіть сума '+' або добуток '*'");
+if (choice == "+"){
+    var sum = nam1 + nam2 + nam3;
+    console.log("Сума цих чисел" + " " + sum);
+}
+else if (choice == "*"){
+    var dobutoc = nam1 * nam2 * nam3;
+    console.log("Добуток цих чисел" + " " + dobutoc);
+}
+else {
+    console.log("Невірний вибір.");
+}
+
+
+
+// Завдання 2
+// Користувач вводить з клавіатури три числа. Залежно від
+// вибору користувача, програма виводить на екран максимум із
+// трьох, мінімум із трьох або середньоарифметичне трьох чисел.
+
+var nam1 = parseInt(prompt("(Завдання 2) Введіть перше число: "));
+var nam2 = parseInt(prompt("(Завдання 2) Введіть друге число: "));
+var nam3 = parseInt(prompt("(Завдання 2) Введіть трете число: "));
+
+var choice = prompt("Введіть максимум '>', мінімум '<' або середньоарифметичне '<>' :");
+
+if (choice === ">") {
+    var max = Math.max(nam1, nam2, nam3);
+    console.log("Максимум з трьох чисел: " + " "  + max);
+} 
+else if (choice === "<") {
+    var min = Math.min(nam1, nam2, nam3);
+    console.log("Мінімум з трьох чисел: " + " "  + min);
+} 
+else if (choice === "<>") {
+    var average = (nam1 + nam2 + nam3) / 3;
+    console.log("Середнє арифметичне трьох чисел: " + " "  + average);
+} 
+else {
+    console.log("Невірний вибір операції.");
+}
+
+
+
+
+// Завдання 3
+// Користувач вводить з клавіатури якусь кількість метрів.
+// Залежно від вибору користувача, програма конвертує метри
+// в милі, дюйми або ярди.
+
+var meters = parseFloat(prompt("(Завдання 3) Введіть кількість метрів:"));
+
+var choice = prompt("Введіть милі 'M', дюйми 'D' або ярди 'J':");
+
+
+if (choice === "M") {
+    var miles = meters * 0.000621371;
+    console.log("Кількість миль: " + " " + miles);
+} 
+else if (choice === "D") {
+    var inches = meters * 39.3701;
+    console.log("Кількість дюймів: " + " " + inches);
+} 
+else if (choice === "J") {
+    var yards = meters * 1.09361;
+    console.log("Кількість ярдів: " + " " + yards);
+} 
+else {
+    console.log("Невірний вибір одиниці виміру.");
+}
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
