@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+
+{% block title %}
+    {{ data.name }}
+{% endblock %}
+
+{% block context %}
+
+    <h1>Працівник : {{data.name}}</h1>
+    <img src="{{ data.photo }}" alt="" width="300">
+    <p>Номер : {{data.Номер}}</p>
+    <p>Компанія : {{data.Компанія}}</p>
+
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        Company 2020
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="/static/my_style.css">
+
+
+</head>
+<body>
+ <h1>Company 2020</h1>
+
+ {% block context %}
+    <p>База співробітників Company</p>
+    <img width="500" src="/static/компания.jpg" alt="test">
+        <ul>
+        {% for data in working %}
+        <li><a href="/working/{{ loop.index0 }}">{{ data.name }}</a> </li>
+        {% endfor %}
+        <a href="/working/form/create/">Додати нового працівника до бази </a>
+
+{% endblock %}
+
+    </ul>
+
+
+</body>
+</html>
