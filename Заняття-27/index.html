@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична 27</title>
+</head>
+<body>
+
+
+<script >
+
+// Завдання 2
+// Користувач вводить з клавіатури довжину лінії та символ
+// для заповнення лінії. Виведіть на екран вертикальну лінію із
+// введеним символом зазначеної довжини.
+// Наприклад, якщо було введено 5 та символ %, тоді виведення на екран буде таким:
+// %
+// %
+// %
+// %
+// // %
+
+var length = prompt("ВВедіть довжину лінії : ")
+var sumvol = prompt("ВВедіть символ для заповнення лінії :  ")
+var line = " ";
+
+for (var i = 0; i < length; i++){
+    line += sumvol + "\n";
+}
+
+console.log(line);
+
+
+
+// // Завдання 3
+// // Користувач вводить з клавіатури числа. Якщо число більше
+// // 0, виведіть напис «Number is positive», якщо менше 0 — «Number
+// // is negative», якщо дорівнює 0 — «Number is equal to zero». Коли
+// // користувач вводить число 7, програма припиняє свою роботу
+// // та виводить на екран напис «Good bye!».
+
+
+var number;
+while (true){
+    number = parseInt(prompt("ВВедіть число : "));
+
+    if (number === 7 ){
+        console.log("ПоКа!!!");
+        break;
+    }
+    else if (number > 0 ){
+        console.log("Number is positive")
+    }
+    else if (number < 0 ){
+        console.log("Number is negative")
+    }
+    else {
+        console.log("Number is equal to zero");
+    }
+
+}
+
+
+//     Завдання 1
+// Користувач вводить з клавіатури два числа. Розрахуйте
+// окремо суму парних, непарних та чисел, кратних 9 у вказаному
+// діапазоні, а також середнє арифметичне кожної групи.
+
+
+
+var start = parseInt(prompt("Введіть початкове число:"));
+var finish = parseInt(prompt("Введіть кінцеве число:"));
+
+
+var sumEven = 0;
+var sumOdd = 0;
+
+
+var countEven = 0;
+var countOdd = 0;
+
+for (var i = start; i <= finish; i++) {
+  if (i % 2 === 0) {
+    sumEven += i;
+    countEven++;
+  } else {
+    sumOdd += i;
+    countOdd++;
+  }
+
+ 
+
+}
+
+var averageEven = countEven === 0 ? 0 : sumEven / countEven;
+var averageOdd = countOdd === 0 ? 0 : sumOdd / countOdd;
+  console.log("Сума парних чисел:", sumEven);
+  console.log("Сума непарних чисел:", sumOdd);
+
+</script>
+
+
+</body>
+</html>
