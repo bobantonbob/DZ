@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <h3>
+        Домашня DZ-27
+    </h3>
+
+
+<script>
+
+// Завдання 1
+// У списку цілих, заповненому довільними числами,
+// розрахуйте:
+// ■ Суму від’ємних чисел.
+// ■ Суму парних чисел.
+// ■ Суму непарних чисел.
+// ■ Добуток елементів з індексами, кратними 3.
+// ■ Добуток елементів між мінімальним та максимальним елементом.
+// ■ Суму елементів, що знаходяться між першим та останнім додатним елементом.
+
+
+const numbers = [1, 2, 3, 4, 5, 0, -1, -2, -3, -4, -5, 6, 7];
+
+
+
+let negativeSum = 0;
+let evenSum = 0;
+let oddSum = 0;
+let multiplicationIndices = 1;
+let min = numbers[0];
+let max = numbers[0];
+let minIndex = 0;
+let maxIndex = 0;
+
+let firstPositiveIndex = null;
+let lastPositiveIndex = null;
+
+for (let index = 0; index < numbers.length; index++) {
+  const num = numbers[index];
+
+  if (num < 0) {
+    negativeSum += num;
+  }
+
+  if (num % 2 === 0) {
+    evenSum += num;
+  } else {
+    oddSum += num;
+  }
+
+  if (index % 3 === 0) {
+    multiplicationIndices *= num;
+  }
+
+  if (num < min) {
+    min = num;
+    minIndex = index;
+  }
+
+  if (num > max) {
+    max = num;
+    maxIndex = index;
+  }
+
+  if (num > 0) {
+    if (firstPositiveIndex === null) {
+      firstPositiveIndex = index;
+    }
+    lastPositiveIndex = index;
+  }
+}
+
+const sumBetweenPositive = numbers
+  .slice(firstPositiveIndex + 1, lastPositiveIndex)
+  .reduce((acc, curr) => acc + curr, 0);
+
+let minMaxProduct = 1;
+const startIndex = minIndex < maxIndex ? minIndex : maxIndex;
+const endIndex = minIndex < maxIndex ? maxIndex : minIndex;
+
+for (let index = startIndex + 1; index < endIndex; index++) {
+  minMaxProduct *= numbers[index];
+}
+
+console.log("Сума від’ємних чисел:", negativeSum);
+console.log("Сума парних чисел:", evenSum);
+console.log("Сума непарних чисел:", oddSum);
+console.log("Добуток елементів з індексами, кратними 3:", multiplicationIndices);
+console.log("Добуток елементів між мінімальним та максимальним елементом:", minMaxProduct);
+console.log("Сума елементів, що знаходяться між першим та останнім додатним елементом:", sumBetweenPositive);
+
+
+
+// Завдання 2
+// Маємо список цілих, заповнений довільними числами. Використовуючи дані цього масиву створіть список цілих, що містить лише:
+// ■ парні числа з першого списку;
+// ■ непарні числа з першого списку;
+// ■ від’ємні числа з першого списку;
+// ■ додатні числа з першого списк
+
+
+const numbers2 = [2, -5, 10, -3, 8, 0, -7, 4, 1, -9, 6, 3];
+
+const evenNumbers = [];
+const oddNumbers = [];
+const negativeNumbers = [];
+const positiveNumbers = [];
+
+for (let i = 0; i < numbers.length; i++) {
+  const num = numbers[i];
+
+  if (num % 2 === 0) {
+    evenNumbers.push(num);
+  } else {
+    oddNumbers.push(num);
+  }
+
+  if (num < 0) {
+    negativeNumbers.push(num);
+  } else if (num > 0) {
+    positiveNumbers.push(num);
+  }
+}
+
+console.log("Парні числа:", evenNumbers);
+console.log("Непарні числа:", oddNumbers);
+console.log("Від’ємні числа:", negativeNumbers);
+console.log("Додатні числа:", positiveNumbers);
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
