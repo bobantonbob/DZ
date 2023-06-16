@@ -1,0 +1,58 @@
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+/* Кнопка зміни теми */
+.theme-button {
+     padding: 10px 20px;
+     background-color: #333;
+     color: #fff;
+     border: none;
+     cursor: pointer;
+}
+
+        /* Темна тема */
+body.dark-theme {
+     background-color: #333;
+     color: #fff;
+}
+
+        /* Змінені стилі кнопки в темній темі */
+body.dark-theme .theme-button {
+      background-color: #fff;
+      color: #333;
+}
+
+
+
+
+.link {
+text-align: center;
+text-decoration: none;
+font-size: 40px;
+
+}
+
+.link:hover{
+color: #db8932;
+text-decoration: underline;
+text-decoration-color: red;
+}
+
+tr {
+font-size: 30px;
+color: #144799;
+text-align: center
+}
+
+#blok1 {
+background: #0dbcfc;
+height: 50px;
+width: auto;
+}
+
+#blok2 {
+background: #fcec0d;
+height: 50px;
+width: auto;
+}
